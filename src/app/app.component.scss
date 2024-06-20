@@ -1,0 +1,14 @@
+.main-content {
+  background: #fff;
+  height: 100%;
+  height: calc(100% - 64px);
+  width: calc(100% - 186px);
+  margin: 0 0 0 186px; // 186px is the width of the sidebar, 60px is the height of the header
+  padding: 30px;
+  overflow-x: auto;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  @media (max-width: #{767px}) {
+    margin-left: 0;
+    padding: 30px 15px;
+  }
+}

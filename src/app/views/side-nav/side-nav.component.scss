@@ -1,0 +1,40 @@
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  background: #fff;
+  width: 186px;
+  height: calc(100vh - 64px);
+  padding: 0 15px;
+  overflow-y: auto;
+  margin: 64px 0 0 0;
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  z-index: 2;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 8px;
+  }
+
+  @media (max-width: #{767px}) {
+    margin-left: -200px;
+    height: 100vh;
+    top: -64px;
+  }
+
+  .mat-list-base {
+    padding-top: 50px;
+
+    .mat-list-item {
+      ::ng-deep .mat-list-item-content {
+        padding: 0 16px 0 12px;
+      }
+    }
+  }
+}

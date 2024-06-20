@@ -1,0 +1,13 @@
+<mat-sidenav #sidenav class="sidenav" mode="side" opened="true">
+  <mat-nav-list>
+    <mat-list-item
+      *ngFor="let sideNav of sideNavs; let i = index"
+      trackByProperty="i"
+      (click)="routeToFeature(sideNav.path)"
+    >
+      <!-- <span class="list-icon {{ sideNav.icon }}" aria-hidden="false" [attr.aria-label]="sideNav.label"
+         ></span> -->
+      <span>{{ sideNav.label }}</span>
+    </mat-list-item>
+  </mat-nav-list>
+</mat-sidenav>

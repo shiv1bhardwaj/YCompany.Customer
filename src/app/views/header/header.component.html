@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-toolbar>
+    Heading
+    <span class="spacer"></span>
+    <button
+      id="menu-button"
+      *ngFor="let menu of headerMenu; let i = index"
+      trackByProperty="i"
+      mat-icon-button
+      [attr.aria-label]="menu.label"
+      (click)="routeToFeature(menu.path)"
+    >
+      <span>{{ menu.label }}</span>
+    </button>
+  </mat-toolbar>
+</div>
